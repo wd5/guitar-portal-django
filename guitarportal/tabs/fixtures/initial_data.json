@@ -1,0 +1,84 @@
+[
+  {
+  	"model": "tabs.chord",
+  	"pk": 1,
+  	"fields": {
+  		"ascii_res": "Intro: (Bb C Dm F) x3\n(Bb F C) x2\n(Gm Bb F C)x4",
+  		"song": 1,
+  		"version": 1
+  	}
+  },
+  {
+  	"model": "tabs.tab",
+  	"pk": 1,
+  	"fields": {
+  		"ascii_res": "Tabbed by: XYZ\nTuning:Standard\n\nIntro\ne|-------------------------------------------------------------------------|\nB|---------------------17--15--13--10------10--10--8----8--10--8-----------|\nG|---14--17--1(b9)-----------------------------------------------------------|\nD|-------------------------------------------------------------------------|\nA|-------------------------------------------------------------------------|\nE|-------------------------------------------------------------------------|\n",
+  		"song": 1,
+  		"version": 1
+  	}
+  },
+  
+    {
+  	"model": "tabs.chord",
+  	"pk": 2,
+  	"fields": {
+  		"ascii_res": "Capo 1\nChords used : Am / C / Dm / F\n Am\nOnce upon a time somebody ran",
+  		"song": 2,
+  		"version": 1
+  	}
+  },
+  {
+  	"model": "tabs.tab",
+  	"pk": 2,
+  	"fields": {
+  		"ascii_res": "Tuning: Standard - EADGBe\n\nThe only thing I can put for the part in the beginning before the main riff is this:\ne|---------------------------------------------------------------------------|\nB|--555-555-----555-555------5/666-666-5/666-666-----------------------------|\nG|---------------------------------------------------------------------------|\nD|---------------------------------------------------------------------------|\nA|---------------------------------------------------------------------------|\nE|---------------------------------------------------------------------------|\n",
+   		"song": 2,
+   		"version": 1
+  	}
+  },
+  
+  {
+  	"model": "tabs.album",
+  	"pk": 1,
+  	"fields": {
+  		"title": "Mylo Xyloto",
+  		"songs": [1]
+  	}
+  },
+  {
+  	"model": "tabs.song",
+  	"pk": 1,
+  	"fields": {
+  		"track_number": 3,
+  		"title": "Paradise",
+  		"artists": [1]
+  	}
+  },
+  {
+  	"model": "tabs.song",
+  	"pk": 2,
+  	"fields": {
+  		"track_number": 10,
+  		"title": "Princess of China",
+  		"artists": [1, 2]
+  	}
+  },
+  {
+    "model": "tabs.artist",
+    "pk": 1,
+    "fields": {
+      "name": "Coldplay",
+      "albums": [1],
+      "home_page": "http://www.coldplay.com/"
+    }
+  },
+  {
+    "model": "tabs.artist",
+    "pk": 2,
+    "fields": {
+      "name": "Rihanna",
+      "home_page": "http://www.rihannanow.com/"
+    }
+  }
+
+]
