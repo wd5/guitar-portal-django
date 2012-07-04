@@ -6,20 +6,20 @@ from urllib import unquote
 from tabs.models import Artist
 from externals.formview import formview
 
-
+def something_list(request, queryset, template):
+    things = list(queryset)
+    return render_to_response(template, {
+            "thing_list": things
+    })
 
 @formview
 def artist_list(request):
     #form = EditForm(id, request.POST or None)
 
     def get():
-        artists = Artist.objects.order_by("name")
-        return render_to_response(
-                request,
-                template = "tabs/templates/artist_list.html",
-                context = {
-                    "artist_list": artists,
-                },
+        return something_list(request,
+                              Artist.objects.order_by("name"),
+                              "tabs/templates/artist_list.html"
         )
 
     def post():
@@ -28,15 +28,14 @@ def artist_list(request):
     return get, post
 
 @formview
-def artist_detail(request, name):
-    artist = get_object_or_404(Artist, name=unquote(name))
-
+def artist_detail(request, artist_name):
+    artist = get_object_or_404(Artist, name=unquote(artist_name))
     def get():
         return render_to_response(
-            template = "tabs/templates/artist_detail.html",
-            context = {
+            "artist_detail.html",
+            {
                 "artist": artist,
-            },
+            }
         )
 
     def post():

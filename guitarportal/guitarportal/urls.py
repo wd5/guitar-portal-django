@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     #url(r'^$', 'guitarportal.views.home', name='home'),
-    url(r'^tabs/', include('guitarportal.tabs.urls')),
+    url(r'^tabs/', include('tabs.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
